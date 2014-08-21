@@ -81,22 +81,29 @@ function faq_schema() {
  * Implements hook_install().
  *
  * Inserts the FAQ module's schema in the SQL database.
+ * @todo rewrite it for 7.x-2.x
  */
-function faq_install() {
+function new_faq_install() {
   variable_set('node_type_faq', array('status'));
-
+  $t = get_t();
   // Ensure the FAQ node type is available.
   node_types_rebuild();
   $types = node_type_get_types();
   node_add_body_field($types['faq']);
+
+  // Change the default label on the body field.
+  $body_instance = field_info_instance('node', 'body', 'faq');
+  $body_instance['label']  = $t('Answer');
+  field_update_instance($body_instance);
 }
 
 /**
  * Implements hook_uninstall().
  *
  * Remove the variables, nodes and schema corresponding to the FAQ module.
+ * @todo rewrite it for 7.x-2.x
  */
-function faq_uninstall() {
+function new_faq_uninstall() {
   // Delete the variables we created.
   // General settings.
   variable_del('faq_title');

@@ -8,6 +8,7 @@
 
 /**
  * Implements hook_help().
+ * @todo rewrite help for 7.x-2.x
  */
 function faq_help($path, $arg) {
   $output = '';
@@ -25,6 +26,7 @@ function faq_help($path, $arg) {
 
 /**
  * Implements hook_permission().
+ * @todo 7.x-2.x do we need these permissions?
  */
 function faq_permission() {
   return array(
@@ -43,8 +45,9 @@ function faq_permission() {
 
 /**
  * Implements hook_node_access().
+ * @deprecated 7.x-2.x
  */
-function faq_node_access($node, $op, $account = NULL) {
+function new_faq_node_access($node, $op, $account = NULL) {
   global $user;
   if (empty($account)) {
     $account = $user;
@@ -74,6 +77,7 @@ function faq_node_access($node, $op, $account = NULL) {
 function faq_menu() {
   $items = array();
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page'] = array(
     'title' => 'Frequently Asked Questions',
     'page callback' => 'faq_page',
@@ -83,6 +87,7 @@ function faq_menu() {
     'type' => MENU_SUGGESTED_ITEM,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page/list'] = array(
     'title' => 'List',
     'page callback' => 'faq_page',
@@ -92,6 +97,7 @@ function faq_menu() {
     'type' => MENU_DEFAULT_LOCAL_TASK,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page/order'] = array(
     'title' => 'Order',
     'description' => 'Allows the user to configure the order of questions and answers on a FAQ page.',
@@ -104,6 +110,7 @@ function faq_menu() {
     'weight' => -8,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page/%'] = array(
     'title' => 'Frequently Asked Questions',
     'page callback' => 'faq_page',
@@ -113,6 +120,7 @@ function faq_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page/%/list'] = array(
     'title' => 'List',
     'page callback' => 'faq_page',
@@ -123,6 +131,7 @@ function faq_menu() {
     'weight' => -10,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['faq-page/%/order'] = array(
     'title' => 'Order',
     'description' => 'Allows the user to configure the order of questions and answers on a FAQ page.',
@@ -135,6 +144,7 @@ function faq_menu() {
     'weight' => -8,
   );
 
+  // @todo 7.x-2.x move this to views display
   $items['admin/config/content/faq'] = array(
     'title' => 'Frequently Asked Questions',
     'description' => 'Allows the user to configure the layout of questions and answers on a FAQ page.',
@@ -182,18 +192,19 @@ function faq_menu() {
 /**
  * Implements hook_node_info().
  *
+ * @todo move this to content type feature
+ *
  * Defines the FAQ node/content type.
- * @return
+ * @return array
  *   An array, containing the title, module name and the description.
  */
-function faq_node_info() {
+function new_faq_node_info() {
   return array(
     'faq' => array(
       'name' => t('FAQ'),
       'base' => 'faq',
       'description' => t('A frequently asked question and its answer.'),
       'title_label' => t('Question'),
-      'body_label' => t('Answer'),
     ),
   );
 }
@@ -201,15 +212,17 @@ function faq_node_info() {
 /**
  * Implements hook_form().
  *
- * @param &$node
+ * @todo 7.x-2.x remove for field api
+ *
+ * @param &$node object
  *   The node being added or edited.
- * @param &$param
+ * @param &$form_state array
  *   The hook can set this variable to an associative array of attributes to add
  *   to the enclosing <form> tag.
- * @return
+ * @return array
  *   The form elements in the $form array.
  */
-function faq_form($node, $form_state) {
+function new_faq_form($node, $form_state) {
   $type = node_type_get_type($node);
 
   // Set defaults.
@@ -237,13 +250,14 @@ function faq_form($node, $form_state) {
     field_attach_form('node', $node, $form, $form_state, $node->language);
   }
 
+//  dpm($form);
   return $form;
 }
 
 /**
  * Implements hook_field_extra_fields().
  */
-function faq_field_extra_fields() {
+function new_faq_field_extra_fields() {
   $extra['node']['faq'] = array(
     'form' => array(
       'detailed_question' => array(
@@ -264,7 +278,7 @@ function faq_field_extra_fields() {
  * @param $node
  *   The node object.
  */
-function faq_insert($node) {
+function new_faq_insert($node) {
   db_insert('faq_questions')
     ->fields(array(
       'nid' => $node->nid,
@@ -310,7 +324,7 @@ function faq_update($node) {
  * @param &$node
  *   Which node to delete.
  */
-function faq_delete($node) {
+function new_faq_delete($node) {
   db_delete('faq_weights')
   ->condition('nid', $node->nid)
   ->execute();
@@ -324,10 +338,10 @@ function faq_delete($node) {
  *
  * Initialises $node->question using the value in the 'faq_questions' table.
  *
- * @param $node
+ * @param $nodes
  *   The node object.
  */
-function faq_load($nodes) {
+function new_faq_load($nodes) {
   foreach ($nodes as $nid => &$node) {
     $result = db_query('SELECT question, detailed_question FROM {faq_questions} WHERE nid = :nid AND vid = :vid', array(
       ':nid' => $node->nid,
@@ -351,7 +365,7 @@ function faq_load($nodes) {
 /**
  * Implements hook_node_revision_delete().
  */
-function faq_node_revision_delete($node) {
+function new_faq_node_revision_delete($node) {
   db_delete('faq_questions')
     ->condition('nid', $node->nid)
     ->condition('vid', $node->vid)
@@ -361,18 +375,30 @@ function faq_node_revision_delete($node) {
 /**
  * Implements hook_view().
  */
-function faq_view($node, $view_mode) {
+function new_faq_view($node, $view_mode) {
+
   drupal_add_css(drupal_get_path('module', 'faq') . '/faq.css');
 
-  // @todo: why is this not used?
-  /*
-  $node->detailed_question = check_markup($node->detailed_question, $node->format);
-  $content = $node->content['body']['#value'];
-
-  if (!empty($node->detailed_question) && variable_get('faq_question_length', 'short') == 'both' && (variable_get('faq_display', 'questions_top') == 'hide_answer' || drupal_match_path($_GET['q'], 'node/' . $node->nid))) {
-    $node->content['body']['#value'] = '<div class="faq-detailed-question">' . $node->detailed_question . '</div>' . $content;
+  $language = $node->language;
+  if (isset($node->body[$language]) && $node->body[$language]) {
+    $node->detailed_question = check_markup($node->detailed_question, $node->body[$language][0]['format'], $language);
+    if (!isset($node->body[$language][0])) drupal_set_message('<pre>'.print_r($node->body, TRUE).'</pre>');
   }
-   */
+  else {
+    $node->detailed_question = check_markup($node->detailed_question, NULL, $language);
+  }
+
+  if (   !empty($node->detailed_question)
+      && variable_get('faq_question_length', 'short') == 'both'
+      && (   variable_get('faq_display', 'questions_top') == 'hide_answer'
+          || drupal_match_path($_GET['q'], 'node/' . $node->nid)
+         )
+     ) {
+    $node->content['detailed_question'] = array(
+      '#markup' => '<div class="faq-detailed-question">' . $node->detailed_question . '</div>',
+      '#weight' => '-1',
+    );
+  }
 
   return $node;
 }
@@ -390,18 +416,18 @@ function faq_views_api() {
 /**
  * Function to display the faq page.
  *
- * @param $tid
+ * @param $tid int
  *   Default is 0, determines if the questions and answers on the page
  *   will be shown according to a category or non-categorized.
- * @param $faq_display
+ * @param $faq_display string
  *   Optional parameter to override default question layout setting.
- * @param $category_display
+ * @param $category_display string
  *   Optional parameter to override default category layout setting.
- * @return
+ * @return string|NULL
  *   The output variable which contains an HTML formatted page with FAQ
  *   questions and answers.
  */
-function faq_page($tid = 0, $faq_display = '', $category_display = '') {
+function new_faq_page($tid = 0, $faq_display = '', $category_display = '') {
   if (module_exists('pathauto')) {
     module_load_include('inc', 'pathauto');
   }
@@ -488,6 +514,9 @@ function faq_page($tid = 0, $faq_display = '', $category_display = '') {
     else {
       $query->orderBy('n.created', 'DESC');
     }
+    if (module_exists('i18n_select')) {
+      $query->condition('n.language', i18n_select_langcodes());
+    }
 
 
     // Only need the nid column.
@@ -546,10 +575,12 @@ function faq_page($tid = 0, $faq_display = '', $category_display = '') {
     $vocab_omit = variable_get('faq_omit_vocabulary', array());
     $items = array();
     $vocab_items = array();
+    $valid_vocab = FALSE;
     foreach ($vocabularies as $vid => $vobj) {
       if (isset($vocab_omit[$vid]) && $vocab_omit[$vid] != 0) {
         continue;
       }
+      $valid_vocab = TRUE;
 
       if ($category_display == "new_page") {
         $vocab_items = _get_indented_faq_terms($vid, 0);
@@ -578,11 +609,14 @@ function faq_page($tid = 0, $faq_display = '', $category_display = '') {
 
           } // End of switch (category_display).
         } // End of foreach term.
-      } // End of foreach vocab.
-    } // End of if $category_display != new_page.
+      } // End of if $category_display != new_page.
+    } // End of foreach vocab.
 
     if ($category_display == "new_page") {
       $output = theme('item_list', array('items' => $items, 'title' => NULL, 'type' => $list_style));
+    }
+    if (!$valid_vocab) {
+      drupal_set_message(t('Categories are enabled but no vocabulary is associated with the FAQ content type. Either create a vocabulary or disable categorization in order for questions to appear.'), 'error');
     }
   }
 
@@ -597,18 +631,18 @@ function faq_page($tid = 0, $faq_display = '', $category_display = '') {
 /**
  * Display FAQ questions and answers filtered by category.
  *
- * @param $faq_display
+ * @param $faq_display string
  *   Define the way the FAQ is being shown; can have the values:
  *   'questions top',hide answers','questions inline','new page'.
- * @param $category_display
+ * @param $category_display string
  *   The layout of categories which should be used.
- * @param $term
+ * @param $term object
  *   The category / term to display FAQs for.
- * @param $display_header
+ * @param $display_header int
  *   Set if the header will be shown or not.
- * @param &$output
+ * @param &$output string
  *   Reference which holds the content of the page, HTML formatted.
- * @param &$output_answer
+ * @param &$output_answers string
  *   Reference which holds the answers from the FAQ, when showing questions
  *   on top.
  */
@@ -618,6 +652,7 @@ function _display_faq_by_category($faq_display, $category_display, $term, $displ
 
   $query = db_select('node', 'n');
   $ti_alias = $query->innerJoin('taxonomy_index', 'ti', '(n.nid = %alias.nid)');
+  $td_alias = $query->innerJoin('taxonomy_term_data', 'td', "({$ti_alias}.tid = %alias.tid)");
   $w_alias = $query->leftJoin('faq_weights', 'w', "%alias.tid = {$ti_alias}.tid AND n.nid = %alias.nid");
   $query
     ->fields('n', array('nid'))
@@ -642,6 +677,10 @@ function _display_faq_by_category($faq_display, $category_display, $term, $displ
   }
   else {
     $query->orderBy('n.created', 'DESC');
+  }
+  if (module_exists('i18n_select')) {
+    $query->condition('n.language', i18n_select_langcodes());
+    $query->condition("{$td_alias}.language", i18n_select_langcodes());
   }
 
 
@@ -827,11 +866,11 @@ function faq_block_view($delta) {
 /**
  * Return a HTML formatted list of terms indented according to the term depth.
  *
- * @param $vid
+ * @param $vid int
  *   Vocabulary id.
- * @param $tid
+ * @param $tid int
  *   Term id.
- * @return
+ * @return string
  *   Return a HTML formatted list of terms indented according to the term depth.
  */
 function _get_indented_faq_terms($vid, $tid) {
@@ -860,7 +899,7 @@ function _get_indented_faq_terms($vid, $tid) {
       $desc = '';
       if (!empty($term->description)) {
         $desc = '<div class="faq-qa-description">';
-        $desc .= check_markup(faq_tt("taxonomy:term:$term->tid:description", $term->description)) . "</div>";
+        $desc .= check_markup(faq_tt("taxonomy:term:$term->tid:description", $term->description), $term->format) . "</div>";
       }
 
       // See if this term has any nodes itself, should it be a link?
@@ -920,7 +959,7 @@ function _get_indented_faq_terms($vid, $tid) {
 /**
  * Get a list of terms associated with the FAQ nodes.
  *
- * @return
+ * @return string
  *   Return the HTML-formatted content.
  */
 function faq_get_terms() {
@@ -938,7 +977,7 @@ function faq_get_terms() {
 /**
  * Format the output for the faq_site_map() function.
  *
- * @return
+ * @return array
  *   Return a list of FAQ categories if categorization is enabled, otherwise
  *   return a list of faq nodes.
  */
@@ -978,6 +1017,9 @@ function faq_get_faq_list() {
   }
   else {
     $query->orderBy('n.created', 'DESC');
+  }
+  if (module_exists('i18n_select')) {
+    $query->condition('n.language', i18n_select_langcodes());
   }
 
   // We only want the first column, which is nid, so that we can load all
@@ -1104,9 +1146,9 @@ function faq_view_answer(&$data, $node, $back_to_top, $teaser, $links) {
   unset($node->content);
 
   $build += array(
-    '#theme' => 'node', 
-    '#node' => $node, 
-    '#view_mode' => $view_mode, 
+    '#theme' => 'node',
+    '#node' => $node,
+    '#view_mode' => $view_mode,
     '#language' => $langcode,
   );
 
@@ -1136,11 +1178,11 @@ function faq_view_answer(&$data, $node, $back_to_top, $teaser, $links) {
 /**
  * Helper function to setup the "back to top" link.
  *
- * @param $path
+ * @param $path string
  *   The path/url where the "back to top" link should bring the user too.  This
  *   could be the 'faq-page' page or one of the categorized faq pages, e.g 'faq-page/123'
  *   where 123 is the tid.
- * @return
+ * @return array
  *   An array containing the "back to top" link.
  */
 function faq_init_back_to_top($path) {
@@ -1151,7 +1193,7 @@ function faq_init_back_to_top($path) {
       'title' => check_plain($back_to_top_text),
       'href' => $path,
       'attributes' => array('title' => t('Go back to the top of the page.')),
-      'fragment' => 'top',
+      'fragment' => 'faq-top',
       'html' => TRUE,
     );
   }
@@ -1162,22 +1204,23 @@ function faq_init_back_to_top($path) {
 /**
  * Helper function for retrieving the sub-categories faqs.
  *
- * @param $term
+ * @param $term object
  *   The category / term to display FAQs for.
- * @param $theme_function
+ * @param $theme_function string
  *   Theme function to use to format the Q/A layout for sub-categories.
- * @param $default_weight
+ * @param $default_weight int
  *   Is 0 for $default_sorting = DESC; is 1000000 for $default_sorting = ASC.
- * @param $default_sorting
+ * @param $default_sorting string
  *   If 'DESC', nodes are sorted by creation date descending; if 'ASC', nodes
  *   are sorted by creation date ascending.
- * @param $category_display
+ * @param $category_display string
  *   The layout of categories which should be used.
- * @param $class
+ * @param $class string
  *   CSS class which the HTML div will be using. A special class name is
  *   required in order to hide and questions / answers.
- * @param $parent_term
+ * @param $parent_term string
  *   The original, top-level, term we're displaying FAQs for.
+ * @return string
  */
 function faq_get_child_categories_faqs($term, $theme_function, $default_weight, $default_sorting, $category_display, $class, $parent_term = NULL) {
   $output = array();
@@ -1193,6 +1236,7 @@ function faq_get_child_categories_faqs($term, $theme_function, $default_weight, 
     if (faq_taxonomy_term_count_nodes($child_term->tid)) {
       $query = db_select('node', 'n');
       $ti_alias = $query->innerJoin('taxonomy_index', 'ti', '(n.nid = %alias.nid)');
+      $td_alias = $query->innerJoin('taxonomy_term_data', 'td', "({$ti_alias}.tid = %alias.tid)");
       $w_alias = $query->leftJoin('faq_weights', 'w', "%alias.tid = {$ti_alias}.tid AND n.nid = %alias.nid");
       $query
         ->fields('n', array('nid'))
@@ -1218,6 +1262,10 @@ function faq_get_child_categories_faqs($term, $theme_function, $default_weight, 
       else {
         $query->orderBy('n.created', 'DESC');
       }
+      if (module_exists('i18n_select')) {
+        $query->condition('n.language', i18n_select_langcodes());
+        $query->condition("{$td_alias}.language", i18n_select_langcodes());
+      }
 
       // We only want the first column, which is nid, so that we can load all
       // related nodes.
@@ -1234,9 +1282,9 @@ function faq_get_child_categories_faqs($term, $theme_function, $default_weight, 
 /**
  * Helper function to setup the list of sub-categories for the header.
  *
- * @param $term
+ * @param $term object
  *   The term to setup the list of child terms for.
- * @return
+ * @return array
  *   An array of sub-categories.
  */
 function faq_view_child_category_headers($term) {
@@ -1255,7 +1303,7 @@ function faq_view_child_category_headers($term) {
       }
 
       $term_vars['link'] = l(faq_tt("taxonomy:term:$child_term->tid:name", $child_term->name), "faq-page/$child_term->tid");
-      $term_vars['description'] = check_markup(faq_tt("taxonomy:term:$child_term->tid:description", $child_term->description));
+      $term_vars['description'] = check_markup(faq_tt("taxonomy:term:$child_term->tid:description", $child_term->description), $child_term->format);
       $term_vars['count'] = $term_node_count;
       $term_vars['term_image'] = $term_image;
       $child_categories[] = $term_vars;
@@ -1402,8 +1450,9 @@ function faq_taxonomy_term_delete($term) {
 /**
  * Function to set up the FAQ breadcrumbs for a given taxonomy term.
  *
- * @param $term
+ * @param $term object
  *   The taxonomy term object.
+ * @return array|NULL
  */
 function faq_set_breadcrumb($term = NULL) {
   $breadcrumb = array();
