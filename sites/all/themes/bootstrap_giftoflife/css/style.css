@@ -14,19 +14,15 @@
     height: 130px;
 }
 
-.navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    padding-top: 28px;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 36px;
     line-height: 35px;
     color: #FFFFFF;
     width: 220px;
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    font-size: 36px;
-    line-height: 35px;
-    color: #FFFFFF;
 }
 
 .main-container {
@@ -38,6 +34,7 @@
  */
 #navbar {
     border-bottom: 5px solid #BAA54C;
+    margin: 0;
 }
 
 #navbar .container {
@@ -47,10 +44,10 @@
 #navbar .container ul {
     margin-top: 50px;
     margin-bottom: 10px;
-    margin-left: 10px;
 }
 
 .navbar-nav {
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
 }
 
@@ -85,3 +82,35 @@
 /*
  * End Navbar overwrites
  */
+
+/*
+ * Landing Page
+ */
+.page-landing .main-container .col-sm-12 {
+    width: 100%;
+    padding: 0px;
+}
+
+.page-landing .main-container .col-sm-12 .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane {
+    position: relative;
+}
+
+.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane .field-name-field-basic-image-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    width: 600px;
+}
+
+.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane .field-name-field-basic-image-caption p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 115px;
+    line-height: 100px;
+    color: #FFFFFF;
+}
