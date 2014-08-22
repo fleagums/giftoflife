@@ -1,0 +1,87 @@
+/**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+
+/*
+ * Main container
+ */
+.navbar-header {
+    margin: 0px;
+}
+
+.logo img {
+    height: 130px;
+}
+
+.navbar-brand {
+    font-size: 36px;
+    line-height: 35px;
+    color: #FFFFFF;
+    width: 220px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    font-size: 36px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.main-container {
+    width: 100%;
+}
+
+/*
+ * Navbar overwrites
+ */
+#navbar {
+    border-bottom: 5px solid #BAA54C;
+}
+
+#navbar .container {
+
+}
+
+#navbar .container ul {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #FFFFFF;
+    background-color: #999999;
+}
+
+.navbar-default .navbar-nav>.leaf>a,
+.navbar-default .navbar-nav>.leaf>a:hover,
+.navbar-default .navbar-nav>.leaf>a:focus {
+    margin-left: 2px;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.leaf>a:hover,
+.navbar-default .navbar-nav>.leaf>a:focus {
+    background-color: #999999;
+}
+
+#navbar {
+    background-color: #122E55;
+}
+
+/*
+ * End Navbar overwrites
+ */
