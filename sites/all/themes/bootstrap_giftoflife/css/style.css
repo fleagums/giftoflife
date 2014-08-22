@@ -86,29 +86,29 @@
 /*
  * Landing Page
  */
-.page-landing .main-container .col-sm-12 {
+body.page-landing > div.main-container.container {
     width: 100%;
     padding: 0px;
 }
 
-.page-landing .main-container .col-sm-12 .container {
+body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container {
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane {
+body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div {
     position: relative;
 }
 
-.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane .field-name-field-basic-image-caption {
+body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div > div.field.field-name-field-basic-image-caption.field-type-text-with-summary.field-label-hidden > div > div {
     position: absolute;
     bottom: 30px;
     left: 100px;
     width: 600px;
 }
 
-.page-landing .main-container .col-sm-12 .container .fieldable-panels-pane .field-name-field-basic-image-caption p {
+body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div > div.field.field-name-field-basic-image-caption.field-type-text-with-summary.field-label-hidden > div > div > p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 115px;
     line-height: 100px;
