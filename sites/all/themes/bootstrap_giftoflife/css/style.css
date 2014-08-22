@@ -114,3 +114,12 @@
     line-height: 100px;
     color: #FFFFFF;
 }
+
+/*
+ * Blog page
+ */
+
+body > div.main-container.container {
+    width: 70%;
+    margin: 0 auto;
+}
