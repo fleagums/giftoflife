@@ -29,6 +29,14 @@
     width: 100%;
 }
 
+body > div.main-container.container > div {
+    margin: 0;
+}
+
+body > div.main-container.container > div > section {
+    padding: 0;
+}
+
 /*
  * Navbar overwrites
  */
@@ -40,7 +48,6 @@
 #navbar .container {
 
 }
-
 #navbar .container ul {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -113,6 +120,19 @@ body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.c
     font-size: 115px;
     line-height: 100px;
     color: #FFFFFF;
+}
+
+/*
+ * Landing page Slogan styles
+ */
+
+#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text {
+    border-bottom: 5px solid #BAA54C;
+}
+
+#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text > div.pane-content > div > div > div > div > p {
+    font-size: 40px;
+    color: #BAA54C;
 }
 
 /*
