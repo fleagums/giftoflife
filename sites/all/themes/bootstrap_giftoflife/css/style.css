@@ -6,6 +6,68 @@
 /*
  * Main container
  */
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+    line-height: 54px;
+}
+
+h2 a {
+    color: #122E55;
+}
+
+.submitted {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #122E55;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.page-header {
+    background-color: #688188;
+    margin: 0;
+    padding: 20px 50px;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.breadcrumb {
+    background-color: #688188;
+    margin: 0;
+    padding: 20px 50px;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 0;
+}
+
+footer.footer.container {
+    background-color: #122E55;
+    border-top: 5px solid #BAA54C;
+    margin: 0;
+    width: 100%;
+}
+
+.pagination {
+    border-radius: 0;
+}
+
+.pagination > li > a {
+    border: 0;
+}
+
+.pagination > li.first > a {
+    border-radius: 0;
+}
+
+.pagination > li.last > a {
+    border-radius: 0;
+}
+
+.pagination > li.active > a {
+    background-color: #999999;
+}
+
 .navbar-header {
     margin: 0px;
 }
@@ -35,6 +97,30 @@ body > div.main-container.container > div {
 
 body > div.main-container.container > div > section {
     padding: 0;
+}
+
+/* sidebar positioning */
+body > div.main-container.container > div.row aside {
+    position: absolute;
+    right: 0px;
+    top: 150px;
+}
+
+/* blog page main container styling */
+body > div.main-container.container {
+    width: 100%;
+    padding: 0;
+}
+
+/* articles and sidebar main content row(container styling) */
+body > div.main-container.container > div.row {
+    position: relative;
+    margin: 0;
+}
+
+/* articles container styling */
+body > div.main-container.container > div.row > section.col-sm-9 {
+    width: 100%;
 }
 
 /*
@@ -98,24 +184,24 @@ body.page-landing > div.main-container.container {
     padding: 0px;
 }
 
-body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container {
+body.page-landing #block-system-main div.container {
     width: 100%;
     padding: 0;
     margin: 0;
 }
 
-body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div {
+body.page-landing #block-system-main div.container div.pane-content > div {
     position: relative;
 }
 
-body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div > div.field.field-name-field-basic-image-caption.field-type-text-with-summary.field-label-hidden > div > div {
+body.page-landing #block-system-main div.container div.pane-content div.field-name-field-basic-image-caption {
     position: absolute;
     bottom: 30px;
     left: 100px;
     width: 600px;
 }
 
-body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-1.pane-bundle-image > div.pane-content > div > div.field.field-name-field-basic-image-caption.field-type-text-with-summary.field-label-hidden > div > div > p {
+body.page-landing #block-system-main div.container div.pane-content div.field-name-field-basic-image-caption p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 115px;
     line-height: 100px;
@@ -126,11 +212,12 @@ body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.c
  * Landing page Slogan styles
  */
 
-#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text {
+/*#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text {*/
+body.page-landing #block-system-main div.container div.pane-bundle-text {
     border-bottom: 5px solid #BAA54C;
 }
 
-#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text > div.pane-content > div > div > div > div > p {
+body.page-landing #block-system-main div.container div.pane-bundle-text p {
     font-size: 40px;
     color: #BAA54C;
 }
@@ -139,7 +226,20 @@ body.page-landing #block-system-main > div > div.panel-display.boxton.clearfix.c
  * Blog page
  */
 
-body > div.main-container.container {
-    width: 70%;
+/* individual article styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row div.node {
+    width: 50%;
     margin: 0 auto;
+    padding: 20px 0;
 }
+
+/* odd articles styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-odd {
+    background-color: #E5EAEB;
+}
+
+/* event articles styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-even {
+    background-color: transparent;
+}
+
