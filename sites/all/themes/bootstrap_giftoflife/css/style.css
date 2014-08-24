@@ -103,7 +103,7 @@ body > div.main-container.container > div > section {
 body > div.main-container.container > div.row aside {
     position: absolute;
     right: 0px;
-    top: 150px;
+    top: 200px;
 }
 
 /* blog page main container styling */
@@ -227,7 +227,7 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
  */
 
 /* individual article styling */
-body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row div.node {
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.node {
     width: 50%;
     margin: 0 auto;
     padding: 20px 0;
@@ -243,3 +243,50 @@ body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.v
     background-color: transparent;
 }
 
+/* styling for individual nodes */
+body.page-node > div.main-container.container > div.row > section.col-sm-9 div.node {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+div.field-name-field-image {
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+}
+
+div.field-name-body {
+    font-size: 16px;
+    width: 80%;
+}
+
+ul.links.list-inline {
+    clear: both;
+    padding: 20px;
+}
+
+#comments {
+    clear: both;
+}
+
+/* readmore link styling */
+.node-readmore {
+    float: right;
+    width: 105px;
+    height: 50px;
+    background-color: #688188;
+    border: 3px solid #BAA54C;
+    padding: 10px;
+    margin-right: 150px;
+}
+
+.node-readmore > a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+}
