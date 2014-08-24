@@ -46,6 +46,8 @@ footer.footer.container {
     border-top: 5px solid #BAA54C;
     margin: 0;
     width: 100%;
+    clear: both;
+    margin-top: 30px;
 }
 
 .pagination {
@@ -265,6 +267,9 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
     text-align: center;
     font-size: 30px;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .landing-page-mission .field-name-field-statement-image,
@@ -274,6 +279,19 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
     left: 46%;
 }
 
+#landing-page-stories-images .view-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#landing-page-stories-images .views-row {
+    width: 33%;
+    float: left;
+}
+
+#landing-page-stories-images .views-row h2 {
+    font-size: 20px;
+}
 
 /*
  * Blog page
