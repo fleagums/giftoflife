@@ -293,6 +293,10 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
     font-size: 20px;
 }
 
+#landing-page-give {
+    clear: both;
+}
+
 /*
  * Blog page
  */
