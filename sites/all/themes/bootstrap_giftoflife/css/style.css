@@ -222,6 +222,59 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
     color: #BAA54C;
 }
 
+.landing-page-mission {
+    position: relative;
+    background-color: #122E55;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.landing-page-mission h2 {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 250px;
+    background-color: #688188;
+    text-align: center;
+    clear: both;
+}
+
+.landing-page-mission h2 a {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.landing-page-mission .field-name-body {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.landing-page-mission .field-name-field-statement-title,
+.landing-page-mission .field-name-field-stories-title {
+    background-color: #FFFFFF;
+    border-top: 5px solid #BAA54C;
+    width: 100%;
+}
+
+.landing-page-mission .field-name-field-statement-title .field-item ,
+.landing-page-mission .field-name-field-stories-title .field-item {
+    text-align: center;
+    font-size: 50px;
+}
+
+.landing-page-mission .field-name-body .field-item p ,
+.landing-page-mission .field-name-body .field-item p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.landing-page-mission .field-name-field-statement-image,
+.landing-page-mission .field-name-field-stories-image {
+    position: absolute;
+    top: 0;
+    left: 46%;
+}
+
+
 /*
  * Blog page
  */
