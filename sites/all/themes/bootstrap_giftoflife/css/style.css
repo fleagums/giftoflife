@@ -48,6 +48,7 @@ footer.footer.container {
     width: 100%;
     clear: both;
     margin-top: 30px;
+    color: #FFFFFF;
 }
 
 .pagination {
@@ -364,4 +365,25 @@ ul.links.list-inline {
     text-align: center;
     display: block;
     font-weight: 600;
+}
+
+/*
+ * Mission page
+ */
+
+.page-mission .panel-display {
+    width: 50%;
+}
+.page-mission h2.pane-title {
+    width: 250px;
+    background-color: #688188;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.page-mission .panel-display .pane-content {
+    font-size: 20px;
+    border-top: 5px solid #BAA54C;
+    padding: 15px 5px 5px 5px;
 }
