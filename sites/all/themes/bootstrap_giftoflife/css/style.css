@@ -1,0 +1,389 @@
+/**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+
+/*
+ * Main container
+ */
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 45px;
+    line-height: 54px;
+}
+
+h2 a {
+    color: #122E55;
+}
+
+.submitted {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #122E55;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.page-header {
+    background-color: #688188;
+    margin: 0;
+    padding: 20px 50px;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.breadcrumb {
+    background-color: #688188;
+    margin: 0;
+    padding: 20px 50px;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 0;
+}
+
+footer.footer.container {
+    background-color: #122E55;
+    border-top: 5px solid #BAA54C;
+    margin: 0;
+    width: 100%;
+    clear: both;
+    margin-top: 30px;
+    color: #FFFFFF;
+}
+
+.pagination {
+    border-radius: 0;
+}
+
+.pagination > li > a {
+    border: 0;
+}
+
+.pagination > li.first > a {
+    border-radius: 0;
+}
+
+.pagination > li.last > a {
+    border-radius: 0;
+}
+
+.pagination > li.active > a {
+    background-color: #999999;
+}
+
+.navbar-header {
+    margin: 0px;
+}
+
+.logo img {
+    height: 130px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    padding-top: 28px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
+    line-height: 35px;
+    color: #FFFFFF;
+    width: 220px;
+}
+
+.main-container {
+    width: 100%;
+}
+
+body > div.main-container.container > div {
+    margin: 0;
+}
+
+body > div.main-container.container > div > section {
+    padding: 0;
+}
+
+/* sidebar positioning */
+body > div.main-container.container > div.row aside {
+    position: absolute;
+    right: 0px;
+    top: 200px;
+}
+
+/* blog page main container styling */
+body > div.main-container.container {
+    width: 100%;
+    padding: 0;
+}
+
+/* articles and sidebar main content row(container styling) */
+body > div.main-container.container > div.row {
+    position: relative;
+    margin: 0;
+}
+
+/* articles container styling */
+body > div.main-container.container > div.row > section.col-sm-9 {
+    width: 100%;
+}
+
+/*
+ * Navbar overwrites
+ */
+#navbar {
+    border-bottom: 5px solid #BAA54C;
+    margin: 0;
+}
+
+#navbar .container {
+
+}
+#navbar .container ul {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.navbar-nav {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #FFFFFF;
+    background-color: #999999;
+}
+
+.navbar-default .navbar-nav>.leaf>a,
+.navbar-default .navbar-nav>.leaf>a:hover,
+.navbar-default .navbar-nav>.leaf>a:focus {
+    margin-left: 2px;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.leaf>a:hover,
+.navbar-default .navbar-nav>.leaf>a:focus {
+    background-color: #999999;
+}
+
+#navbar {
+    background-color: #122E55;
+}
+
+/*
+ * End Navbar overwrites
+ */
+
+/*
+ * Landing Page
+ */
+body.page-landing > div.main-container.container {
+    width: 100%;
+    padding: 0px;
+}
+
+body.page-landing #block-system-main div.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body.page-landing #block-system-main div.container div.pane-content > div {
+    position: relative;
+}
+
+body.page-landing #block-system-main div.container div.pane-content div.field-name-field-basic-image-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    width: 600px;
+}
+
+body.page-landing #block-system-main div.container div.pane-content div.field-name-field-basic-image-caption p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 115px;
+    line-height: 100px;
+    color: #FFFFFF;
+}
+
+/*
+ * Landing page Slogan styles
+ */
+
+/*#block-system-main > div > div.panel-display.boxton.clearfix.container > div > div > div.contextual-links-region.panel-pane.pane-fieldable-panels-pane.pane-fpid-2.pane-bundle-text {*/
+body.page-landing #block-system-main div.container div.pane-bundle-text {
+    border-bottom: 5px solid #BAA54C;
+}
+
+body.page-landing #block-system-main div.container div.pane-bundle-text p {
+    font-size: 40px;
+    color: #BAA54C;
+}
+
+.landing-page-mission {
+    position: relative;
+    background-color: #122E55;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.landing-page-mission h2 {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 250px;
+    background-color: #688188;
+    text-align: center;
+    clear: both;
+}
+
+.landing-page-mission h2 a {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.landing-page-mission .field-name-body {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.landing-page-mission .field-name-field-statement-title,
+.landing-page-mission .field-name-field-stories-title {
+    background-color: #FFFFFF;
+    border-top: 5px solid #BAA54C;
+    width: 100%;
+}
+
+.landing-page-mission .field-name-field-statement-title .field-item ,
+.landing-page-mission .field-name-field-stories-title .field-item {
+    text-align: center;
+    font-size: 50px;
+}
+
+.landing-page-mission .field-name-body .field-item p ,
+.landing-page-mission .field-name-body .field-item p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.landing-page-mission .field-name-field-statement-image,
+.landing-page-mission .field-name-field-stories-image {
+    position: absolute;
+    top: 0;
+    left: 46%;
+}
+
+#landing-page-stories-images .view-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#landing-page-stories-images .views-row {
+    width: 33%;
+    float: left;
+}
+
+#landing-page-stories-images .views-row h2 {
+    font-size: 20px;
+}
+
+#landing-page-give {
+    clear: both;
+}
+
+/*
+ * Blog page
+ */
+
+/* individual article styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.node {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* odd articles styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-odd {
+    background-color: #E5EAEB;
+}
+
+/* event articles styling */
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-even {
+    background-color: transparent;
+}
+
+/* styling for individual nodes */
+body.page-node > div.main-container.container > div.row > section.col-sm-9 div.node {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+div.field-name-field-image {
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+}
+
+div.field-name-body {
+    font-size: 16px;
+    width: 80%;
+}
+
+ul.links.list-inline {
+    clear: both;
+    padding: 20px;
+}
+
+#comments {
+    clear: both;
+}
+
+/* readmore link styling */
+.node-readmore {
+    float: right;
+    width: 105px;
+    height: 50px;
+    background-color: #688188;
+    border: 3px solid #BAA54C;
+    padding: 10px;
+    margin-right: 150px;
+}
+
+.node-readmore > a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+}
+
+/*
+ * Mission page
+ */
+
+.page-mission .panel-display {
+    width: 50%;
+}
+.page-mission h2.pane-title {
+    width: 250px;
+    background-color: #688188;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.page-mission .panel-display .pane-content {
+    font-size: 20px;
+    border-top: 5px solid #BAA54C;
+    padding: 15px 5px 5px 5px;
+}
