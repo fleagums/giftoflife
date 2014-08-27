@@ -3,6 +3,11 @@
  * remove this comment and start adding your styles to this file.
  */
 
+@font-face {
+    font-family: Entypo;
+    src: url(Entypo/entypo.ttf);
+}
+
 /*
  * Main container
  */
@@ -303,14 +308,15 @@ body.page-landing #block-system-main div.container div.pane-bundle-text p {
  */
 
 /* individual article styling */
-body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.node {
+body > div.main-container.container > div.row > section.col-sm-9 div.node {
     width: 50%;
     margin: 0 auto;
     padding: 20px 0;
 }
 
 /* odd articles styling */
-body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-odd {
+body.page-blog > div.main-container.container > div.row > section.col-sm-9 div.views-row-odd,
+body.page-faq > div.main-container.container > div.row > section.col-sm-9 div.views-row-odd {
     background-color: #E5EAEB;
 }
 
