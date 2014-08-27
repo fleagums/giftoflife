@@ -387,3 +387,10 @@ ul.links.list-inline {
     border-top: 5px solid #BAA54C;
     padding: 15px 5px 5px 5px;
 }
+
+/* Donate page */
+
+.paypal_button {
+  height: 50px;
+  width: 100px;
+}
