@@ -1,4 +1,5 @@
 @import "compass/css3/transform";
+@import "breakpoint";
 
 $base-font-size: 14px;
 
@@ -36,8 +37,32 @@ $base-font-size: 14px;
         }
         aside {
             position: absolute;
-            right: 0px;
+            right: -70px;
             top: 200px;
+        }
+    }
+    // Event Callender styling
+    .view-event-calendar {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .views-field-field-profile-image {
+        width: 21%;
+        float: left;
+        margin-right: 10px;
+    }
+    .field-name-field-image {
+        width: 21%;
+        float: left;
+        margin-right: 10px;
+    }
+    .field-name-body {
+        font-size: em(16px);
+        width: 80%;
+    }
+    .boxton-container {
+        p {
+            width: 75%;
         }
     }
 }
@@ -74,6 +99,7 @@ h2 {
     font-family: 'Josefin Sans', sans-serif;
     border-radius: 0;
 }
+
 
 .footer.container {
     background-color: #122E55;
@@ -118,6 +144,10 @@ h2 {
             margin-top: 50px;
             margin-bottom: 10px;
         }
+        .dropdown-menu {
+            margin-top: 0;
+            background-color: #122E55;
+        }
     }
     .navbar-brand, .navbar-brand:hover, .navbar-brand:focus {
         padding-top: 28px;
@@ -132,18 +162,18 @@ h2 {
         font-size: em(18px);
         .active {
             a, a:hover, a:focus {
-                color: #FFFFFF;
-                background-color: #999999;
+                color: #BAA54C;
+                background-color: #122E55;
             }
         }
-        .leaf {
+        .leaf, .dropdown {
             a, a:hover, a:focus {
                 margin-left: 2px;
                 padding: 10px;
                 color: #FFFFFF;
             }
             a:hover, a:focus {
-                background-color: #999999;
+                color: #BAA54C;
             }
         }
     }
@@ -181,6 +211,7 @@ h2 {
                     color: #BAA54C;
                     width: 50%;
                     margin: 0 auto;
+                    text-align: center;
                 }
             }
         }
@@ -248,4 +279,36 @@ h2 {
 
 #landing-page-give {
     clear: both;
+}
+
+// Blog page styling
+
+.links.list-inline {
+    clear: both;
+    padding: 20px;
+}
+
+#comments {
+    clear: both;
+}
+
+/* readmore link styling */
+.node-readmore {
+    float: right;
+    width: 105px;
+    height: 50px;
+    background-color: #688188;
+    border: 3px solid #BAA54C;
+    padding: 10px;
+    margin-right: 150px;
+}
+
+.node-readmore > a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+    font-weight: 600;
 }

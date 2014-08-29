@@ -30,8 +30,29 @@
 }
 .main-container .row aside {
   position: absolute;
-  right: 0px;
+  right: -70px;
   top: 200px;
+}
+.main-container .view-event-calendar {
+  width: 50%;
+  margin: 0 auto;
+}
+.main-container .views-field-field-profile-image {
+  width: 21%;
+  float: left;
+  margin-right: 10px;
+}
+.main-container .field-name-field-image {
+  width: 21%;
+  float: left;
+  margin-right: 10px;
+}
+.main-container .field-name-body {
+  font-size: 1.14286em;
+  width: 80%;
+}
+.main-container .boxton-container p {
+  width: 75%;
 }
 
 h2 {
@@ -106,6 +127,10 @@ h2 a {
   margin-top: 50px;
   margin-bottom: 10px;
 }
+#navbar .container .dropdown-menu {
+  margin-top: 0;
+  background-color: #122E55;
+}
 #navbar .navbar-brand, #navbar .navbar-brand:hover, #navbar .navbar-brand:focus {
   padding-top: 28px;
   font-family: 'Josefin Sans', sans-serif;
@@ -119,16 +144,16 @@ h2 a {
   font-size: 1.28571em;
 }
 #navbar .navbar-nav .active a, #navbar .navbar-nav .active a:hover, #navbar .navbar-nav .active a:focus {
-  color: #FFFFFF;
-  background-color: #999999;
+  color: #BAA54C;
+  background-color: #122E55;
 }
-#navbar .navbar-nav .leaf a, #navbar .navbar-nav .leaf a:hover, #navbar .navbar-nav .leaf a:focus {
+#navbar .navbar-nav .leaf a, #navbar .navbar-nav .leaf a:hover, #navbar .navbar-nav .leaf a:focus, #navbar .navbar-nav .dropdown a, #navbar .navbar-nav .dropdown a:hover, #navbar .navbar-nav .dropdown a:focus {
   margin-left: 2px;
   padding: 10px;
   color: #FFFFFF;
 }
-#navbar .navbar-nav .leaf a:hover, #navbar .navbar-nav .leaf a:focus {
-  background-color: #999999;
+#navbar .navbar-nav .leaf a:hover, #navbar .navbar-nav .leaf a:focus, #navbar .navbar-nav .dropdown a:hover, #navbar .navbar-nav .dropdown a:focus {
+  color: #BAA54C;
 }
 
 .page-landing #block-system-main .container {
@@ -159,6 +184,7 @@ h2 a {
   color: #BAA54C;
   width: 50%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .landing-page-mission {
@@ -220,4 +246,34 @@ h2 a {
 
 #landing-page-give {
   clear: both;
+}
+
+.links.list-inline {
+  clear: both;
+  padding: 20px;
+}
+
+#comments {
+  clear: both;
+}
+
+/* readmore link styling */
+.node-readmore {
+  float: right;
+  width: 105px;
+  height: 50px;
+  background-color: #688188;
+  border: 3px solid #BAA54C;
+  padding: 10px;
+  margin-right: 150px;
+}
+
+.node-readmore > a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  line-height: 38px;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+  font-weight: 600;
 }
