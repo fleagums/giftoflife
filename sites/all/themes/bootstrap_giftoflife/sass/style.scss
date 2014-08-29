@@ -258,8 +258,11 @@ h2 {
     }
     .field-name-field-statement-image, .field-name-field-stories-image {
         position: absolute;
-        top: 0px;
-        left: 46%;
+        top: 96px;
+        left: 47%;
+        img {
+            width: initial;
+        }
     }
 }
 

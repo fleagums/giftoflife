@@ -228,8 +228,11 @@ h2 a {
 }
 .landing-page-mission .field-name-field-statement-image, .landing-page-mission .field-name-field-stories-image {
   position: absolute;
-  top: 0px;
-  left: 46%;
+  top: 96px;
+  left: 47%;
+}
+.landing-page-mission .field-name-field-statement-image img, .landing-page-mission .field-name-field-stories-image img {
+  width: initial;
 }
 
 #landing-page-stories-images .view-content {
