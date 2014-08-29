@@ -195,7 +195,7 @@ h2 {
                     position: absolute;
                     bottom: 30px;
                     left: 100px;
-                    width: 40%;
+                    width: 46%;
                     p {
                         font-family: 'Josefin Sans', sans-serif;
                         font-size: em(115px);
@@ -212,6 +212,11 @@ h2 {
                     width: 50%;
                     margin: 0 auto;
                     text-align: center;
+                }
+            }
+            .pane-bundle-image {
+                img {
+                    width: initial;
                 }
             }
         }
