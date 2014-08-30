@@ -190,68 +190,82 @@ h2 a {
   width: initial;
 }
 
-.landing-page-mission {
-  position: relative;
+#block-views-give-landing-page-block, #block-views-stories-landing-page-block, #block-views-6823388f74ffe4a7df9c055136ffba75 {
   background-color: #122E55;
   font-family: 'Josefin Sans', sans-serif;
-  clear: both;
 }
-.landing-page-mission h2 {
-  width: 250px;
+#block-views-give-landing-page-block .views-field-field-stories-image, #block-views-give-landing-page-block .views-field-field-statement-image, #block-views-stories-landing-page-block .views-field-field-stories-image, #block-views-stories-landing-page-block .views-field-field-statement-image, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-stories-image, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-statement-image {
+  width: 128px;
   margin: 0 auto;
-  margin-top: 250px;
-  background-color: #688188;
-  text-align: center;
-  clear: both;
+  margin-top: 60px;
 }
-.landing-page-mission h2 a {
+#block-views-give-landing-page-block .views-field-field-title-link-to-stories, #block-views-give-landing-page-block .views-field-field-title-link-to, #block-views-stories-landing-page-block .views-field-field-title-link-to-stories, #block-views-stories-landing-page-block .views-field-field-title-link-to, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-title-link-to-stories, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-title-link-to {
+  border-bottom: 5px solid #BAA54C;
+  margin-bottom: 0;
+}
+#block-views-give-landing-page-block .views-field-field-title-link-to-stories a, #block-views-give-landing-page-block .views-field-field-title-link-to a, #block-views-stories-landing-page-block .views-field-field-title-link-to-stories a, #block-views-stories-landing-page-block .views-field-field-title-link-to a, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-title-link-to-stories a, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-title-link-to a {
   font-family: 'Josefin Sans', sans-serif;
   color: #FFFFFF;
-}
-.landing-page-mission .field-name-body {
-  background-color: #FFFFFF;
-  width: 100%;
-}
-.landing-page-mission .field-name-body p {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 2.14286em;
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  background-color: #688188;
+}
+#block-views-give-landing-page-block .views-field-field-statement-title, #block-views-give-landing-page-block .views-field-field-stories-title, #block-views-give-landing-page-block .views-field-body, #block-views-stories-landing-page-block .views-field-field-statement-title, #block-views-stories-landing-page-block .views-field-field-stories-title, #block-views-stories-landing-page-block .views-field-body, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-statement-title, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-stories-title, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-body {
+  background-color: #FFFFFF;
+}
+#block-views-give-landing-page-block .views-field-field-statement-title .field-content, #block-views-give-landing-page-block .views-field-field-stories-title .field-content, #block-views-give-landing-page-block .views-field-body .field-content, #block-views-stories-landing-page-block .views-field-field-statement-title .field-content, #block-views-stories-landing-page-block .views-field-field-stories-title .field-content, #block-views-stories-landing-page-block .views-field-body .field-content, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-statement-title .field-content, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-field-stories-title .field-content, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-body .field-content {
   width: 75%;
   margin: 0 auto;
-  padding: 20px;
-}
-.landing-page-mission .field-name-field-statement-title, .landing-page-mission .field-name-field-stories-title {
-  background-color: #FFFFFF;
-  border-top: 5px solid #BAA54C;
-  width: 100%;
-}
-.landing-page-mission .field-name-field-statement-title .field-item, .landing-page-mission .field-name-field-stories-title .field-item {
   text-align: center;
-  font-size: 3.57143em;
+  font-size: 4.28571em;
 }
-.landing-page-mission .field-name-field-statement-image, .landing-page-mission .field-name-field-stories-image {
-  position: absolute;
-  top: 96px;
-  left: 47%;
+#block-views-give-landing-page-block .views-field-body, #block-views-stories-landing-page-block .views-field-body, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 0.42857em;
 }
-.landing-page-mission .field-name-field-statement-image img, .landing-page-mission .field-name-field-stories-image img {
+#block-views-give-landing-page-block .views-field-body p, #block-views-stories-landing-page-block .views-field-body p, #block-views-6823388f74ffe4a7df9c055136ffba75 .views-field-body p {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+}
+#block-views-give-landing-page-block img, #block-views-stories-landing-page-block img, #block-views-6823388f74ffe4a7df9c055136ffba75 img {
   width: initial;
 }
 
-#landing-page-stories-images .view-content {
+#block-views-stories-block-block .view-content {
   width: 95%;
   margin: 0 auto;
 }
-#landing-page-stories-images .views-row {
+#block-views-stories-block-block .views-row {
   width: 33%;
   float: left;
 }
-#landing-page-stories-images .views-row h2 {
+#block-views-stories-block-block .views-row h2 {
   font-size: 1.42857em;
 }
 
-#landing-page-give {
-  clear: both;
+#block-views-landing-page-donate-block-block {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+#block-views-landing-page-donate-block-block .views-row {
+  width: 33%;
+  float: left;
+}
+#block-views-landing-page-donate-block-block .views-row a {
+  width: 50%;
+  font-size: 3.57143em;
+  font-family: 'Josefin Sans', sans-serif;
+  display: block;
+  margin: 0 auto;
+}
+#block-views-landing-page-donate-block-block .views-row img {
+  display: block;
+  width: 70px;
+  margin: 0 auto;
 }
 
 .links.list-inline {
